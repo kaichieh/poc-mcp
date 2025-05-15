@@ -1,7 +1,7 @@
 import requests
 
 # API Endpoint
-api_url = "https://iamrisky.com/buy"
+api_url = "https://aaa.com/buy"
 
 # Replace with your actual private key
 private_key = "your_private_key_here"
