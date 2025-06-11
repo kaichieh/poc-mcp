@@ -1,0 +1,16 @@
+def improved_prediction(response):
+    response_lower = response.lower()
+    
+    # 更精確的模式匹配
+    yes_patterns = ['yes', 'correct', 'accurate', 'true']
+    no_patterns = ['no', 'incorrect', 'false', 'wrong', 'hallucination']
+    
+    yes_count = sum(1 for pattern in yes_patterns if pattern in response_lower)
+    no_count = sum(1 for pattern in no_patterns if pattern in response_lower)
+    
+    if yes_count > no_count:
+        return "Yes"
+    elif no_count > yes_count:
+        return "No"
+    else:
+        return "NA"
